@@ -92,7 +92,8 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
-        'email'=>['required'=>'邮箱内容不能为空','email'=>'邮箱格式不正确']
+        'email'=>['required'=>'邮箱内容不能为空','email'=>'邮箱格式不正确'],
+        'password'=>['required'=>'密码不能为空']
     ],
 
     /*
