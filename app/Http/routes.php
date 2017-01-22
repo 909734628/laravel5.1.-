@@ -16,6 +16,7 @@ Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 
 get('signup','UsersController@create')->name('signup');
+get('signup/confirm/{token}','UsersController@confirmEmail')->name('confirm_email');
 
 resource('users', 'UsersController');
 
