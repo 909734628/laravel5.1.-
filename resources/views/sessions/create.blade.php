@@ -1,5 +1,6 @@
 @extends('layouts.default')
-@section('title','登录')
+@section('title', '登录')
+
 @section('content')
     <div class="col-md-offset-2 col-md-8">
         <div class="panel panel-default">
@@ -10,6 +11,7 @@
                 @include('shared.errors')
 
                 <form method="POST" action="{{ route('login') }}">
+
                     {{ csrf_field() }}
 
                     <div class="form-group">
@@ -31,7 +33,7 @@
 
                 <hr>
 
-                <p>还没账号？<a href="{{ route('signup') }}">现在注册！</a></p>
+                <p>还没账号？<a href="{{ ('signup') }}">现在注册！</a></p>
             </div>
         </div>
     </div>

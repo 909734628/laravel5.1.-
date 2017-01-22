@@ -12,10 +12,14 @@
 */
 
 $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
+    $datetime = $faker->dateTime;
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
+        'password' => str_random(10),
         'remember_token' => str_random(10),
+        'is_admin' => false,
+        'created_at' => $datetime,
+        'updated_at' => $datetime
     ];
 });
