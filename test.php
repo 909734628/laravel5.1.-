@@ -4,3 +4,4 @@ class School{
 
 }
 echo School::class;
+
