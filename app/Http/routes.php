@@ -23,3 +23,10 @@ resource('users', 'UsersController');
 post('login','SessionsController@store')->name('login');
 get('login','SessionsController@create')->name('login');
 delete('login','SessionsController@destroy')->name('logout');
+
+get('password/email','Auth\PasswordController@getEmail')->name('password.reset');
+post('password/email','Auth\PasswordController@postEmail')->name('password.reset');
+get('password/reset/{token}','Auth\PasswordController@getReset')->name('password.edit');
+post('password/reset', 'Auth\PasswordController@postReset')->name('password.update');
+
+
